@@ -1,0 +1,6 @@
+<form method="post">
+        Jméno: <input type="text" name="jmeno" /><br />
+        Přijmení: <input type="text" name="prijmeni" /><br />
+        E-mail: <input type="email" name="email" /><br />
+        <input type="submit" />
+</form>
