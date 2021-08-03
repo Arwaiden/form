@@ -1,0 +1,46 @@
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <title>Formulář</title>
+ </head>
+ <body>
+     <h1>Objednávka</h1>
+     <form action="https://dnesnibrno.cz/test/objednavka.php" method="post" oninput="celkem.value=parseInt(pocet.value) * parseInt(cena.value);">
+	<fieldset>
+	   <legend><strong>ADRESA</strong></legend>
+		<strong>Jméno: <input type="text" name="jmeno" maxlength="25" required /></strong><br />
+		<strong>Příjmení: <input type="text" name="prijmeni" maxlength="25" required /></strong><br />
+		<strong>Ulice:</strong> <input type="text" name="ulice" maxlength="30" required /><br />
+		<strong>PSČ:</strong> <input type="number" name="psc" pattern="[0-9]{5,6}" maxlength="6" required /><br />
+		<strong>Obec:</strong> <input type="text" name="obec" maxlength="30" required /><br />
+		<strong>E-mail:</strong> <input type="email" name="email" maxlength="50" required /><br />
+		Mobil: <input type="tel" name="mobil" pattern="[0-9]{9,12}" maxlength="12" /><br />
+	</fieldset>
+	<br />
+	<fieldset>
+	   <legend><strong>FIRMA</strong></legend>
+		IČO: <input type="number" name="ico" pattern="[0-9]{8}" maxlength="8" /><br />
+		DIČ: <input type="text" name="dic" pattern="{12}" maxlength="12" /><br />
+	</fieldset>
+	<br />
+	<fieldset>
+	   <legend><strong>OBJEDNÁVKA</strong></legend>
+		<strong>Název produktu:</strong> <input type="text" name="produkt" maxlength="50" required /><br />
+		<strong>Počet kusů:</strong> <input type="number" name="pocet" value="1" maxlength="7" min="0" required /><br />
+		<strong>Cena produktu:</strong> <input type="number" name="cena" value="0" maxlength="7" min="0" required />&nbsp;Kč&nbsp;s&nbsp;DPH<br />	
+	</fieldset>
+	<br />
+	<fieldset>
+	   <legend><strong>CELKOVÁ CENA</strong></legend>
+		<strong>&nbsp;<output name="celkem" for="pocet,cena"></strong>&nbsp;<strong>Kč s&nbsp;DPH</strong></output>
+	</fieldset>
+	<br />
+	<fieldset>
+	   <legend><strong>POZNÁMKA</strong></legend>
+		<textarea name="poznamka" rows="1" cols="40" placeholder="Vaše poznámka." maxlength="255"></textarea>
+	</fieldset>
+	<br />
+	<input type="submit" value="Objednat">
+     </form>
+ </body>
+</html>
